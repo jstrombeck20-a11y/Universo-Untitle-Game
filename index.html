@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+<head>
+  <style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+
+    .sobre-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: purple;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .sobre-btn:hover {
+      background: #dd00ff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Untitle Game — Universo / Central Oficial</title>
@@ -751,11 +780,14 @@
   </main>
 
   <footer>
-    <div class="container footer-row">
-      <div>© 2026 Untitle Game. Todos os botões possivelmente escondidos.</div>
-      <div>Feito para apenas, apenas parecer absurdo de bom ✋😐🤚</div>
-    </div>
-  </footer>
+  <p>
+    © 2026 Untitle Game. Todos os botões possivelmente escondidos.<br>
+    Feito para apenas, apenas parecer absurdo de bom ✋😐🤚
+  </p>
+
+  <!-- 👇 AQUI, LOGO EMBAIXO DO TEXTO -->
+  <a href="sobre.html.html" class="sobre-btn">Sobre nós</a>	
+</footer>
 
   <script>
     const buttons = document.querySelectorAll('.tab-btn');
@@ -772,3 +804,4 @@
   </script>
 </body>
 </html>
+
