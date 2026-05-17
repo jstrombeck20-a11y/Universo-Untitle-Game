@@ -823,6 +823,54 @@ if (chance < 0.01) {
 
 }
 </script>
+<script>
+
+function glitchTela() {
+
+    document.body.style.filter = "invert(1) hue-rotate(90deg)";
+
+    setTimeout(() => {
+        document.body.style.filter = "none";
+    }, 150);
+
+}
+
+// chance aleatória a cada 10 segundos
+setInterval(() => {
+
+    if (Math.random() < 0.50) {
+        glitchTela();
+    }
+
+}, 10000);
+
+</script>
+<script>
+
+const hora = new Date().getHours();
+
+if (hora === 1) {
+
+    const freddy = document.createElement("img");
+
+    freddy.src = "https://i.redd.it/7ljtngshx3ie1.gif";
+
+    freddy.style.position = "fixed";
+    freddy.style.top = "50%";
+    freddy.style.left = "50%";
+    freddy.style.transform = "translate(-50%, -50%)";
+
+    freddy.style.width = "400px";
+
+    freddy.style.zIndex = "9999";
+
+    document.body.appendChild(freddy);
+
+    alert("HAR HAR HAR HAR HAR");
+
+}
+
+</script>
 </body>
 </html>
 
