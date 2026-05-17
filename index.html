@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
 
 <head>
   <style>
@@ -849,7 +848,7 @@ setInterval(() => {
 
 const hora = new Date().getHours();
 
-if (hora === 3) {
+if (hora === 2) {
 
     const freddy = document.createElement("img");
 
@@ -862,13 +861,151 @@ if (hora === 3) {
 
     freddy.style.width = "400px";
 
-    freddy.style.zIndex = "9999";
+    freddy.style.zIndex = "99999";
+
+    // 👇 não bloqueia clique
+    freddy.style.pointerEvents = "none";
 
     document.body.appendChild(freddy);
 
+    // 👁️ título amaldiçoado
+    document.title = "🐻HAR HAR HAR HAR HAR🐻";
+
     alert("🐻HAR HAR HAR HAR HAR🐻");
 
+    // 👇 some depois de 10 segundos
+    setTimeout(() => {
+
+        freddy.remove();
+
+        // volta título normal
+        document.title = "Untitle Game — Universo / Central Oficial";
+
+    }, 10000);
+
 }
+
+</script>
+<script>
+
+function peixeGirando() {
+
+    const peixe = document.createElement("img");
+
+    peixe.src = "https://i.redd.it/9jbtd25pgss71.gif";
+
+    peixe.style.position = "fixed";
+    peixe.style.top = "50%";
+    peixe.style.left = "50%";
+    peixe.style.transform = "translate(-50%, -50%)";
+
+    peixe.style.width = "300px";
+
+    peixe.style.zIndex = "9999";
+
+    document.body.appendChild(peixe);
+
+    setTimeout(() => {
+        peixe.remove();
+    }, 3000);
+
+}
+
+// chance rara
+setInterval(() => {
+
+    if (Math.random() < 0.01) {
+        peixeGirando();
+    }
+
+}, 60000);
+
+</script>
+<script>
+
+function hackeando() {
+
+    const tela = document.createElement("div");
+
+    tela.style.position = "fixed";
+    tela.style.top = "0";
+    tela.style.left = "0";
+
+    tela.style.width = "100%";
+    tela.style.height = "100%";
+
+    tela.style.background = "black";
+
+    tela.style.color = "lime";
+
+    tela.style.fontFamily = "monospace";
+    tela.style.fontSize = "30px";
+
+    tela.style.padding = "40px";
+
+    tela.style.zIndex = "99999";
+
+    tela.innerHTML = `
+    acessando sistema...<br>
+    falha...<br>
+    falha...<br>
+    ELE ENTROU.
+    `;
+
+    document.body.appendChild(tela);
+
+    setTimeout(() => {
+        tela.remove();
+    }, 4000);
+
+}
+
+// chance rara
+setInterval(() => {
+
+    if (Math.random() < 0.01) {
+        hackeando();
+    }
+
+}, 90000);
+
+</script>
+<script>
+
+function sapoJumpscare() {
+
+    const sapo = document.createElement("div");
+
+    sapo.innerHTML = "🐸";
+
+    sapo.style.position = "fixed";
+    sapo.style.top = "50%";
+    sapo.style.left = "50%";
+
+    sapo.style.transform = "translate(-50%, -50%)";
+
+    sapo.style.fontSize = "200px";
+
+    sapo.style.zIndex = "99999";
+
+    document.body.appendChild(sapo);
+
+    alert("SAPO DETECTADO.");
+
+    setTimeout(() => {
+        sapo.remove();
+    }, 1500);
+
+}
+
+// chance ULTRA rara
+setInterval(() => {
+
+    if (Math.random() < 0.003) {
+        sapoJumpscare();
+    }
+
+}, 120000);
 
 </script>
 </body>
