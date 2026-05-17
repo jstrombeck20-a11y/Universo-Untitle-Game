@@ -837,11 +837,11 @@ function glitchTela() {
 // chance aleatória a cada 10 segundos
 setInterval(() => {
 
-    if (Math.random() < 0.50) {
+    if (Math.random() < 0.5) {
         glitchTela();
     }
 
-}, 30000);
+}, 10000);
 
 </script>
 <script>
@@ -851,34 +851,29 @@ const hora = new Date().getHours();
 if (hora === 3) {
 
     const freddy = document.createElement("img");
-
     freddy.src = "https://i.redd.it/7ljtngshx3ie1.gif";
 
     freddy.style.position = "fixed";
     freddy.style.top = "50%";
     freddy.style.left = "50%";
     freddy.style.transform = "translate(-50%, -50%)";
-
     freddy.style.width = "400px";
-
     freddy.style.zIndex = "99999";
-
-    // 👇 não bloqueia clique
     freddy.style.pointerEvents = "none";
 
     document.body.appendChild(freddy);
 
-    // 👁️ título amaldiçoado
-    document.title = "🐻HAR HAR HAR HAR HAR🐻";
+    // 🔊 ÁUDIO DO JUMPSCARE
+    const som = new Audio("freddy.mp3");
+    som.volume = 1.0; // volume máximo
+    som.play();
 
-    alert("🐻HAR HAR HAR HAR HAR🐻");
+    document.title = "🐻UR UR UR UR UR🐻";
+    alert("🐻UR UR UR UR UR🐻");
 
-    // 👇 some depois de 10 segundos
     setTimeout(() => {
 
         freddy.remove();
-
-        // volta título normal
         document.title = "Untitle Game — Universo / Central Oficial";
 
     }, 10000);
@@ -949,7 +944,10 @@ function hackeando() {
     acessando sistema...<br>
     falha...<br>
     falha...<br>
-    ELE ENTROU.
+    proteção de sistema corrompida...<br>
+    ELE ENTROU.<br>
+    NÃO FECHE ESTA ABA.<br>
+    APENAS MUDE PARA OUTRA.<br>
     `;
 
     document.body.appendChild(tela);
@@ -967,7 +965,7 @@ setInterval(() => {
         hackeando();
     }
 
-}, 90000);
+}, 60000);
 
 </script>
 <script>
